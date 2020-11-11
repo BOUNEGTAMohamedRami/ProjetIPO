@@ -1,5 +1,6 @@
 package frog;
 
+
 import gameCommons.Game;
 import gameCommons.IFrog;
 import util.Case;
@@ -10,14 +11,16 @@ public class Frog implements IFrog {
 	private Game game;
 	private Case myPosition;
 
-	@Override
-	public Case getPosition(Case myPosition) {
-		return this.myPosition = myPosition;
+	public Frog (Game game){
+		this.game = game;
+		this.myPosition = new Case(5,0);
 	}
+
+
 
 	@Override
 	public Case getPosition() {
-		return null;
+		return this.myPosition;
 	}
 
 	@Override
